@@ -38,7 +38,7 @@ Foi usado como referencia dois datasets distintos. A seguir estão referenciados
 - Dataset de imagens de cartoon: [iCartoon](https://github.com/luxiangju-PersonAI/iCartoonFace) 
 - Dataset de desenhos antropomorficos: [E621 Faces Dataset](https://github.com/arfafax/E621-Face-Dataset).
 
-
+As imagens usadas para o treinamento da rede convolucional podem ser encontradas:  [Google Drive](https://goggle) 
 ## Resultados experimentais
 
 
