@@ -1,10 +1,13 @@
 # Trabalho Final de FSI
 
 Universidade de Brasília
+
 Departamento de Ciência da Computação
+
 CIC0193 - Fundamentos de Sistemas Inteligentes - 2021/1
 
 Alunos: Gabriel Oliveira & Thiago Chaves
+
 Professor: Vinícius R. P. Borges
 
 ## Sumário
