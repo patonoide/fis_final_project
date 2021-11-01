@@ -7,14 +7,14 @@ async function doupload() {
 
   document.getElementById("list-results").innerHTML = "";
 
-  fetch('http://127.0.0.0:5000/furry', {method: "POST", body: formData}).then( async (response) => {
+  fetch('http://localhost:5000/furry', {method: "POST", body: formData}).then( async (response) => {
       let data = await response.json();
       data.forEach((result)=> {
         document.getElementById("list-results").innerHTML += ` 
         <li class="nav-item">
-          <a class="nav-link active show" data-bs-toggle="tab">
+          <a class="nav-link active" data-bs-toggle="tab">
             <h4>Image: ` + result.name + `</h4>
-            <p>We found that this image is ` + result.value*100 + `% furry.</p>
+            <p>We found that this image is ` +parseFloat(result.value*100).toFixed(2) + `% furry.</p>
           </a>
         </li>`;
       })
