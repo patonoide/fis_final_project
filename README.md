@@ -26,7 +26,7 @@ O sistema recebe como entrada um arquivo comprimido .zip contendo todas as image
 
 - Inicialmente a pagina web recebe um conjunto de imagens a serem processadas
 - Em seguida as imagens são enviadas ao servidor
-- As imagens são lidas e redimensionadas para 512 pixels por 512 pixels
+- As imagens são lidas e é realizado o preprocessamento que foi selecionado
 - Os dados são enviados a uma rede neural convolucional
 - O resultado da rede neural é uma porcentagem relacionada ao quão furry sua imagem é
 - Esse resultado é enviado de volta a página web onde é mostrada para o usuário.
@@ -41,5 +41,20 @@ Foi usado como referencia dois datasets distintos. A seguir estão referenciados
 As imagens usadas para o treinamento da rede convolucional podem ser encontradas:  [Google Drive](https://goggle) 
 ## Resultados experimentais
 
+Para os casos de teste foram usados um conjunto separado do conjunto de treinamento, com 100 imagens de desenhos e 37 de furries. Como os rotulos são binários e o resultado dos modelos criados são um número real, os valores acima de 0.5 foram considerados como 1, e abaixo de 0.5 como 0.
 
-## Referencias
+Todos os modelos criados foram treinados por 10 epochs. 
+
+### Teste inicial
+
+Os testes foram inicialmente feitos usando um minimo de preprocessamento para ver como o modelo proposto se sairia nos testes. O modelo criado é referenciado no sistema como "CNN - Resizing Without preprocessing", em que todas as imagens usadas na rede convolucional são apenas redimensionadas para um tamanho de 512x512. 
+
+Nesse teste, obtivemos uma acurácia de 80% para os casos de teste. Porém, a topologia da rede, dado o tamanho inicial da imagem possuia muitos parametros de treinamento, o que tornou o processo de aprendizagem e classificação muito demorado. 
+
+### Testes com preprocessamento
+
+A seguir foram feitos uma série de mudanças no preprocessamento das imagens e na topologia da CNN. Foram tirados algumas camadas densas e de convolução em relação a original e o preprocessamento dos dados foi mudado para um redimensionamento de 64x64 e uso de tons de cinza. Esse modelo é referenciado no sistema como "CNN - Gray Scale/ Resize 64x64".
+
+Nesse teste, foram obtidos resultados melhores que no anterior, com uma acuraciad e 91% para os casos de teste. Com essa nova topologia, a fase de treinamento se mostrou consideravelmente mais rapida, assim como a classificação do conjunto de testes.
+
+Além disso, no teste seguinte, foi adicionada uma fase de rotação aleatória no treinamento da rede para ver como seriam os novos resultados. Para esse caso foi obtido 71% de acurácia no conjunto de treinamento
