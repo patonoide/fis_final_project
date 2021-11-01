@@ -3,7 +3,6 @@ async function doupload() {
   let formData = new FormData();
 
   formData.append("file", photo);
-  formData.append("type", 1);
 
   document.getElementById("list-results").innerHTML = "";
   document.getElementById("spinner1").innerHTML = `
@@ -11,6 +10,11 @@ async function doupload() {
       <span class="visually-hidden">Loading...</span>
     </div>
   `;
+
+  var e = document.getElementById("preprocessing-opt");
+  var opt = e.value;
+  formData.append("type", opt);
+
 
   fetch('http://localhost:5000/furry', {method: "POST", body: formData}).then( async (response) => {
       let data = await response.json();
