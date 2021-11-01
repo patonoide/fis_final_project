@@ -15,7 +15,7 @@ Professor: Vinícius R. P. Borges
 O sistema web criado tem como propósito criar uma forma de pessoas descobrirem se seus desenhos são "furries" ou não.
 Para a criação do sistema foram utilizadas as bibliotecas de python: Keras para o reconhecimento das imagens, Numpy para calculos e Flask para criação da API. 
 
-O sistema pode ser encontrado no endereço: LINK
+O sistema pode ser encontrado no endereço: [Acesso ao front](https://patonoide.github.io/fsi_final_project/)
 
 A seguir serão descritos o funcionamento do sistema, a metodologia empregada e os resultados obtidos.
 
