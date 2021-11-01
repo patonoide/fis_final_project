@@ -6,6 +6,11 @@ async function doupload() {
   formData.append("type", 1);
 
   document.getElementById("list-results").innerHTML = "";
+  document.getElementById("spinner1").innerHTML = `
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  `;
 
   fetch('http://localhost:5000/furry', {method: "POST", body: formData}).then( async (response) => {
       let data = await response.json();
@@ -18,6 +23,7 @@ async function doupload() {
           </a>
         </li>`;
       })
+      document.getElementById("spinner1").innerHTML = "";
       window.scrollTo(0,document.body.scrollHeight);
   });
 
