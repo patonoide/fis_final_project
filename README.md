@@ -41,7 +41,7 @@ Foi usado como referencia dois datasets distintos. A seguir estão referenciados
 - Dataset de imagens de cartoon: [iCartoon](https://github.com/luxiangju-PersonAI/iCartoonFace) 
 - Dataset de desenhos antropomorficos: [E621 Faces Dataset](https://github.com/arfafax/E621-Face-Dataset).
 
-As imagens usadas para o treinamento da rede convolucional podem ser encontradas:  [Google Drive](https://goggle) 
+As imagens usadas para o treinamento e validação dos modelos propostos podem ser encontradas:  [Google Drive](https://unbbr-my.sharepoint.com/:f:/g/personal/180058975_aluno_unb_br/ErF487jcTL9CiGLZmRh2j9QBZnWTH75dFYIz2rHBio4-ng?e=bX1Q6K) 
 ## Resultados experimentais
 
 Para os casos de teste foram usados um conjunto separado do conjunto de treinamento, com 100 imagens de desenhos e 37 de furries. Como os rotulos são binários e o resultado dos modelos criados são um número real, os valores acima de 0.5 foram considerados como 1, e abaixo de 0.5 como 0.
