@@ -17,7 +17,7 @@ async function doupload() {
       data.forEach((result)=> {
         document.getElementById("list-results").innerHTML += ` 
         <li class="nav-item">
-          <a class="nav-link active" data-bs-toggle="tab">
+          <a class="nav-link" data-bs-toggle="tab">
             <h4>Image: ` + result.name + `</h4>
             <p>We found that this image is ` +parseFloat(result.value*100).toFixed(2) + `% furry.</p>
           </a>
