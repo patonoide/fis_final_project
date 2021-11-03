@@ -27,12 +27,8 @@ def test():
 def scraping():
     padrao = request.form['type']
 
-    if padrao == str(1):
-        model = models.load_model('./main_model')
-    elif padrao == str(2):
-        model = models.load_model('./rotation_model')
-    elif padrao == str(3):
-        model = models.load_model('./grayscale_model')
+
+    model = models.load_model('./grayscale_model')
 
     file = request.files['file']
     zip = zipfile.ZipFile(file)
